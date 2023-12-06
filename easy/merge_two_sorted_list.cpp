@@ -11,8 +11,10 @@
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        // Check the head node. If equal, we have list1 head, else, the smaller
-
+        // Not required but does achieve a must higher runtime percentile. 
+        if(list1 == nullptr )return list2;
+        if(list2 == nullptr )return list1; 
+        
         ListNode* front= new ListNode(); //First node at front -> next
         ListNode* follow = front; 
         while(list1!= nullptr && list2!= nullptr){
