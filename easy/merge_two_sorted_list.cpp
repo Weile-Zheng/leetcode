@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -36,4 +37,27 @@ public:
     }
 };
 
+
+// ---------------Recursive Version-------------------
+
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        // Check the head node. If equal, we have list1 head, else, the smaller
+        if(list1 == nullptr )return list2;
+        if(list2 == nullptr )return list1;
+
+        ListNode* front = new ListNode();
+        if(list1->val<= list2->val){
+            front=list1;
+            front->next = mergeTwoLists(list1->next, list2);
+        }
+        else{
+            front= list2;
+            front->next= mergeTwoLists(list1, list2->next);
+        }
+        return front;
+    }
+
+};
 // Submission: https://leetcode.com/problems/merge-two-sorted-lists/
