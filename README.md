@@ -1,6 +1,8 @@
 # leetcode
 My Solutions to LeetCode Problems
 
+![leetcode](https://stats.justsong.cn/api/leetcode/?username=weile-zheng)
+
 [Link to my LeetCode](https://leetcode.com/Weile-Zheng/)
 
 Some submitted answer I have provided detail documentation for solution steps and complexity analysis. They can be found in "Solution" section
